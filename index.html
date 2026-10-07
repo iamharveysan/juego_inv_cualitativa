@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>ConCéntrate · Investigación Cualitativa</title>
+<style>
+:root{--gold:#ffd700;--gold2:#c9a84c;--bg:#070707;--panel:#151515;--panel2:#202020;--text:#f8f5ea;--muted:#bdb49b;--line:rgba(255,215,0,.24);--ok:#6dbe9b;--danger:#e06c62}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(255,215,0,.12),transparent 27%),linear-gradient(145deg,#050505,#171717 55%,#090909);color:var(--text);min-height:100vh}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1480px;margin:auto;padding:20px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:10px 0 18px}.brand small{display:block;color:var(--gold2);text-transform:uppercase;letter-spacing:.17em;font-size:10px}.brand h1{margin:4px 0 0;font-size:28px}.status{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.badge{border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:999px;padding:7px 10px;font-size:11px;color:var(--muted)}.badge strong{color:#fff}.panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border-radius:22px;padding:18px}.hero{display:grid;grid-template-columns:1fr .9fr;gap:18px;align-items:stretch}.hero h2{font-size:46px;line-height:1.04;margin:8px 0 12px}.hero p{color:var(--muted);line-height:1.6}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:750;min-height:44px}.primary{background:var(--gold);color:#000}.ghost{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff}.danger{background:#3a1c1a;color:#ffd8d4;border:1px solid rgba(224,108,98,.35)}.infoGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.info{border:1px solid rgba(255,215,0,.15);border-radius:14px;background:rgba(0,0,0,.3);padding:13px}.info b{display:block;color:#fff;font-size:20px}.info span{font-size:11px;color:var(--muted)}.view{display:none}.view.active{display:block}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.field input{width:100%;border:1px solid rgba(255,255,255,.14);background:#101010;color:#fff;border-radius:11px;padding:12px;min-height:44px;outline:none}.field input:focus{border-color:var(--gold)}.members{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gridGame{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px}.gameHead{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.turn{font-size:19px;font-weight:800}.turn span{color:var(--gold)}.board{display:grid;grid-template-columns:repeat(6,minmax(90px,1fr));gap:10px}.card{aspect-ratio:1/1;border:1px solid rgba(255,215,0,.22);background:linear-gradient(145deg,#1b1b1b,#0c0c0c);border-radius:16px;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;position:relative;transition:.25s;min-height:92px}.card:not(:disabled):hover{transform:translateY(-2px);border-color:rgba(255,215,0,.58)}.card .back{font-size:23px;font-weight:900;color:var(--gold)}.card.open{background:linear-gradient(145deg,rgba(255,215,0,.18),rgba(255,255,255,.055));border-color:var(--gold);animation:flipin .26s ease}.card.matched{background:linear-gradient(145deg,rgba(109,190,155,.22),rgba(255,255,255,.04));border-color:rgba(109,190,155,.58)}.card.loading::after{content:"";width:26px;height:26px;border:3px solid rgba(255,255,255,.18);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;position:absolute}.card.loading .back{opacity:.18}@keyframes spin{to{transform:rotate(360deg)}}@keyframes flipin{from{transform:rotateY(70deg);opacity:.5}to{transform:none;opacity:1}}.cardText{font-size:12px;line-height:1.35}.cardType{position:absolute;top:6px;left:7px;font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold2)}.rankItem{display:grid;grid-template-columns:30px 1fr auto;gap:8px;align-items:center;border-bottom:1px solid rgba(255,255,255,.07);padding:9px 0}.rankItem:last-child{border:0}.pos{width:25px;height:25px;border-radius:8px;background:rgba(255,255,255,.07);display:grid;place-items:center;font-size:11px}.pts{font-weight:800;color:var(--gold)}.toast{border-left:4px solid var(--gold);background:rgba(255,215,0,.08);border-radius:0 12px 12px 0;padding:11px 13px;margin:12px 0;color:#fff}.modal{position:fixed;inset:0;background:rgba(0,0,0,.76);display:none;align-items:center;justify-content:center;padding:18px;z-index:30}.modal.show{display:flex}.modalCard{width:min(620px,100%);background:#151515;border:1px solid var(--line);border-radius:22px;padding:20px}.options{display:grid;gap:9px;margin-top:14px}.option{border:1px solid rgba(255,255,255,.14);background:#1f1f1f;color:#fff;border-radius:12px;padding:12px;text-align:left;min-height:48px}.option:hover{border-color:var(--gold)}.small{font-size:11px;color:var(--muted)}.hostList{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:12px}.hostTeam{border:1px solid rgba(255,255,255,.11);border-radius:12px;padding:10px;background:rgba(255,255,255,.04)}.connect{display:inline-flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:#777}.dot.on{background:var(--ok)}.pulse{animation:pulse 1s ease infinite}@keyframes pulse{50%{opacity:.45}}@media(max-width:1050px){.hero,.gridGame{grid-template-columns:1fr}.board{grid-template-columns:repeat(4,1fr)}.gameSide{order:-1}.hostList{grid-template-columns:1fr 1fr}}@media(max-width:640px){.shell{padding:12px}.topbar{align-items:flex-start}.hero h2{font-size:34px}.members,.hostList{grid-template-columns:1fr}.board{grid-template-columns:repeat(3,1fr);gap:7px}.card{min-height:86px;padding:7px}.cardText{font-size:10.5px}.status{justify-content:flex-end}.gameHead{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div class="brand"><small>Semana 10 · Investigación cualitativa</small><h1>ConCéntrate</h1></div>
+    <div class="status">
+      <div class="badge"><span class="connect"><span id="connDot" class="dot"></span><strong id="connText">Conectando</strong></span></div>
+      <div class="badge">Código <strong>QUALI10</strong></div>
+      <div class="badge">Equipos <strong id="teamCount">0/20</strong></div>
+      <div class="badge">Pares <strong id="pairCount">0/12</strong></div>
+    </div>
+  </div>
+
+  <section id="homeView" class="view active">
+    <div class="hero">
+      <div class="panel">
+        <div class="small">GAME SHOW ACADÉMICO · TIEMPO REAL</div>
+        <h2>Memoria, estrategia y comprensión cualitativa.</h2>
+        <p>Encuentra pares conceptuales, valida el aprendizaje y suma puntos. Un dispositivo participa oficialmente por equipo; los demás pueden seguir la partida en vivo.</p>
+        <div class="actions">
+          <button class="btn primary" id="goRegister">Registrar equipo</button>
+          <button class="btn ghost" id="goOfficial">Dispositivo oficial</button>
+          <button class="btn ghost" id="goSpectator">Ver partida</button>
+          <button class="btn ghost" id="goHost">Docente / Host</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="infoGrid">
+          <div class="info"><b>20</b><span>equipos máximo</span></div>
+          <div class="info"><b>5</b><span>integrantes por equipo</span></div>
+          <div class="info"><b>12</b><span>pares conceptuales</span></div>
+          <div class="info"><b>Tiempo real</b><span>Firebase Realtime Database</span></div>
+        </div>
+        <div class="toast">El tablero, turnos y ranking se sincronizan en vivo entre todos los dispositivos.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="registerView" class="view">
+    <div class="panel">
+      <div class="small">REGISTRO OFICIAL</div><h2>Forma tu equipo</h2>
+      <p class="small">Registra entre 1 y 5 integrantes. El sistema asignará automáticamente el número de equipo.</p>
+      <div class="field" style="max-width:420px"><label>Nombre del equipo</label><input id="teamName" maxlength="40" placeholder="Ej. Los Analistas"></div>
+      <div id="members" class="members" style="margin-top:12px"></div>
+      <div class="actions"><button class="btn ghost" id="addMember">Agregar integrante</button><button class="btn primary" id="submitTeam">Registrar equipo</button><button class="btn ghost backHome">Volver</button></div>
+      <div id="registerMsg" class="toast" style="display:none"></div>
+    </div>
+  </section>
+
+  <section id="officialView" class="view">
+    <div class="gridGame">
+      <div>
+        <div class="gameHead"><div><div class="small">DISPOSITIVO OFICIAL</div><div class="turn">Turno: <span id="officialTurn">—</span></div></div><div class="small" id="officialIdentity">Sin equipo conectado</div></div>
+        <div id="officialMessage" class="toast">Esperando partida...</div><div id="officialBoard" class="board"></div>
+      </div>
+      <aside class="panel gameSide"><h3>Ranking</h3><div id="officialRank"></div><div class="actions"><button class="btn ghost backHome">Inicio</button></div></aside>
+    </div>
+  </section>
+
+  <section id="spectatorView" class="view">
+    <div class="gridGame">
+      <div><div class="gameHead"><div><div class="small">MODO ESPECTADOR</div><div class="turn">Turno: <span id="spectatorTurn">—</span></div></div><div class="small">Solo lectura</div></div><div id="spectatorMessage" class="toast">Esperando partida...</div><div id="spectatorBoard" class="board"></div></div>
+      <aside class="panel gameSide"><h3>Ranking</h3><div id="spectatorRank"></div><div class="actions"><button class="btn ghost backHome">Inicio</button></div></aside>
+    </div>
+  </section>
+
+  <section id="hostView" class="view">
+    <div class="panel">
+      <div class="small">CONTROL DOCENTE</div><h2>Host de la partida</h2>
+      <div class="field" style="max-width:260px"><label>PIN docente</label><input id="hostPin" type="password" inputmode="numeric" placeholder="PIN"></div>
+      <div class="actions"><button class="btn primary" id="hostStart">Iniciar partida</button><button class="btn ghost" id="hostPause">Pausar</button><button class="btn ghost" id="hostResume">Reanudar</button><button class="btn danger" id="hostResetGame">Reiniciar juego</button><button class="btn danger" id="hostResetAll">Borrar equipos y reiniciar</button></div>
+      <div id="hostMessage" class="toast">PIN inicial: 2026</div>
+      <div class="gridGame" style="margin-top:14px">
+        <div><div class="gameHead"><div class="turn">Turno: <span id="hostTurn">—</span></div><div class="small">El host puede abrir tarjetas; las validaciones las responde el equipo oficial.</div></div><div id="hostBoard" class="board"></div></div>
+        <div><h3>Equipos registrados</h3><div id="hostTeams" class="hostList"></div></div>
+      </div>
+      <div class="actions"><button class="btn ghost backHome">Inicio</button></div>
+    </div>
+  </section>
+</div>
+
+<div class="modal" id="validationModal"><div class="modalCard"><div class="small">VALIDACIÓN ACADÉMICA · +5 PUNTOS</div><h3 id="validationQuestion">Pregunta</h3><div id="validationOptions" class="options"></div><div class="small" id="validationHint"></div></div></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
+import { getDatabase, ref, set, get, onValue, update, runTransaction, remove } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
+
+const firebaseConfig={apiKey:"AIzaSyC5ibb4DEW_02ApV0xI1870xkuqsDwjtog",authDomain:"juego-inv-cualitativa.firebaseapp.com",databaseURL:"https://juego-inv-cualitativa-default-rtdb.firebaseio.com",projectId:"juego-inv-cualitativa",storageBucket:"juego-inv-cualitativa.firebasestorage.app",messagingSenderId:"777775249949",appId:"1:777775249949:web:38bcb11167728e013124f4"};
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase(app);
+const GAME="QUALI10",GAME_REF=ref(db,`games/${GAME}`),HOST_PIN="2026",MAX_TEAMS=20,MAX_MEMBERS=5,MATCH_POINTS=10,VALIDATION_POINTS=5;
+
+const PAIRS=[
+{id:"P01",a:"Investigación cualitativa",b:"Comprende experiencias, percepciones y significados.",q:"Una investigadora quiere comprender por qué algunos estudiantes desconfían de comprar por internet. ¿Qué enfoque es más apropiado?",o:["Cualitativo","Solo descriptivo numérico","Censo estadístico"],c:0},
+{id:"P02",a:"Pregunta abierta",b:"Invita a explicar, narrar o describir una experiencia.",q:"¿Cuál pregunta abre mejor una conversación cualitativa?",o:["¿Está satisfecho? Sí/No","¿Cuántas veces compra?","Cuénteme cómo fue su última experiencia de compra."],c:2},
+{id:"P03",a:"Entrevista en profundidad",b:"Conversación individual guiada para explorar experiencias y significados.",q:"Si quiero conocer en detalle la experiencia personal de un dueño con una veterinaria, ¿qué técnica conviene?",o:["Entrevista en profundidad","Encuesta cerrada","Conteo de tráfico"],c:0},
+{id:"P04",a:"Grupo focal",b:"Conversación grupal para explorar acuerdos, diferencias y percepciones compartidas.",q:"¿Qué técnica permite observar cómo varias personas discuten y contrastan sus opiniones?",o:["Grupo focal","Muestreo aleatorio","Regresión lineal"],c:0},
+{id:"P05",a:"Observación",b:"Permite analizar comportamientos en su contexto real.",q:"Un investigador registra cómo los clientes se desplazan y esperan dentro de un punto de venta. ¿Qué técnica usa?",o:["Observación","Entrevista estructurada","Correlación"],c:0},
+{id:"P06",a:"Dato cualitativo",b:"Puede ser un relato, frase, gesto, imagen, documento u observación.",q:"¿Cuál de estos es un dato cualitativo?",o:["Promedio 4,2","“Me dio tranquilidad que me explicaran todo”","37%"],c:1},
+{id:"P07",a:"Código",b:"Nombre breve que identifica una idea presente en un relato.",q:"“No me informaron cuánto costaría hasta el final”. ¿Qué código representa mejor la idea?",o:["Demora","Precio poco claro","Ubicación"],c:1},
+{id:"P08",a:"Categoría",b:"Agrupa códigos relacionados bajo una idea de mayor nivel.",q:"Los códigos “demora”, “fila larga” y “espera excesiva” podrían agruparse en:",o:["Tiempo de atención","Precio","Ubicación"],c:0},
+{id:"P09",a:"Testimonio",b:"Fragmento de la voz del participante usado como evidencia.",q:"¿Cuál opción corresponde a un testimonio?",o:["Confianza profesional","“El veterinario me explicó cada paso con calma”","Intención = 4,1"],c:1},
+{id:"P10",a:"Hallazgo cualitativo",b:"Interpretación de un patrón respaldada por evidencia.",q:"¿Cuál redacción se acerca más a un hallazgo cualitativo?",o:["La gente se queja.","La falta de claridad del precio aparece de forma recurrente y afecta la confianza en el servicio.","El promedio fue 3,7."],c:1},
+{id:"P11",a:"Profundidad",b:"Busca comprender razones, emociones, experiencias y significados detrás de una respuesta.",q:"¿Cuál opción muestra mayor profundidad?",o:["¿Le gusta el servicio?","¿Qué elementos de su experiencia hicieron que confiara o desconfiara del servicio?","Califique de 1 a 5."],c:1},
+{id:"P12",a:"Cuantitativo vs. cualitativo",b:"Medir patrones vs. comprender significados.",q:"Power BI muestra que una zona tiene mayor intención. ¿Qué pregunta cualitativa complementa mejor ese dato?",o:["¿Cuál es el promedio exacto?","¿Cuántas personas hay?","¿Qué características de esa zona generan confianza para usar el servicio?"],c:2}
+];
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let uid=null,live=null,myTeamId=localStorage.getItem("cq_team_id")||"",memberCount=1,busy=false,loadingSlot=null;
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function showView(id){$$(".view").forEach(v=>v.classList.remove("active"));$("#"+id).classList.add("active");render()}
+function msg(sel,text,err=false){const e=$(sel);e.style.display="block";e.textContent=text;e.style.borderLeftColor=err?"var(--danger)":"var(--gold)"}
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function makeCards(){return shuffle(PAIRS.flatMap(p=>[{id:p.id+"A",pairId:p.id,text:p.a,type:"concept",matched:false,revealed:false},{id:p.id+"B",pairId:p.id,text:p.b,type:"definition",matched:false,revealed:false}])).map((c,i)=>({...c,slot:i}))}
+async function ensureGame(){const snap=await get(GAME_REF);if(!snap.exists())await set(GAME_REF,{meta:{code:GAME,status:"lobby",createdAt:Date.now()},state:{mode:"lobby",paused:false,currentTeamId:"",turn:0,opened:[],pending:null,message:"Registro abierto.",matchedPairs:0},teams:{}})}
+function renderMembers(){const box=$("#members");box.innerHTML="";for(let i=1;i<=memberCount;i++){const d=document.createElement("div");d.className="field";d.innerHTML=`<label>Integrante ${i}</label><input class="memberInput" maxlength="70" placeholder="Nombre y apellido">`;box.appendChild(d)}$("#addMember").disabled=memberCount>=5}
+function teamsSorted(){return Object.entries(live?.teams||{}).map(([id,t])=>({id,...t})).sort((a,b)=>(b.points||0)-(a.points||0)||(b.pairs||0)-(a.pairs||0)||(a.number||0)-(b.number||0))}
+function currentTeam(){const id=live?.state?.currentTeamId||"";return id&&live?.teams?.[id]?{id,...live.teams[id]}:null}
+async function registerTeam(){if(!uid)return;const name=$("#teamName").value.trim(),members=$$(".memberInput").map(x=>x.value.trim()).filter(Boolean);if(!name)return msg("#registerMsg","Escribe un nombre para el equipo.",true);if(!members.length)return msg("#registerMsg","Escribe al menos un integrante.",true);const arr=Object.entries(live?.teams||{});if(arr.length>=MAX_TEAMS)return msg("#registerMsg","Ya hay 20 equipos registrados.",true);if(arr.some(([_,t])=>String(t.name||"").toLowerCase()===name.toLowerCase()))return msg("#registerMsg","Ese nombre de equipo ya existe. Usa otro.",true);const nums=arr.map(([_,t])=>Number(t.number)||0),number=(nums.length?Math.max(...nums):0)+1,teamId="E"+String(number).padStart(2,"0");await set(ref(db,`games/${GAME}/teams/${teamId}`),{number,name,members,ownerUid:uid,points:0,pairs:0,correct:0,doubleNext:false,shield:false,createdAt:Date.now()});myTeamId=teamId;localStorage.setItem("cq_team_id",teamId);msg("#registerMsg",`Equipo ${number} · ${name} registrado. Este dispositivo es el oficial.`);setTimeout(()=>showView("officialView"),650)}
+function rankHTML(){return teamsSorted().map((t,i)=>`<div class="rankItem"><div class="pos">${i+1}</div><div><b>Equipo ${t.number} · ${esc(t.name)}</b><div class="small">${t.pairs||0} pares · ${t.correct||0} validaciones</div></div><div class="pts">${t.points||0}</div></div>`).join("")||'<div class="small">Aún no hay equipos.</div>'}
+function boardHTML(interactive){const cards=live?.cards?Object.values(live.cards).sort((a,b)=>a.slot-b.slot):[];if(!cards.length)return '<div class="panel" style="grid-column:1/-1;text-align:center"><b>La partida aún no ha comenzado.</b><div class="small" style="margin-top:6px">El docente iniciará cuando los equipos estén listos.</div></div>';return cards.map(c=>{const isLoad=loadingSlot===c.slot,cls=c.matched?"card matched":(c.revealed?"card open":"card")+(isLoad?" loading":"");const content=(c.revealed||c.matched)?`<span class="cardType">${c.type==="concept"?"Concepto":"Pareja"}</span><span class="cardText">${esc(c.text)}</span>`:`<span class="back">${String(c.slot+1).padStart(2,"0")}</span>`;return `<button class="${cls}" data-slot="${c.slot}" ${interactive&&!c.matched&&!c.revealed&&!busy?"":"disabled"}>${content}</button>`}).join("")}
+function render(){if(!live)return;$("#teamCount").textContent=`${Object.keys(live.teams||{}).length}/20`;$("#pairCount").textContent=`${live.state?.matchedPairs||0}/12`;const ct=currentTeam(),turn=ct?`Equipo ${ct.number} · ${ct.name}`:"—";$("#officialTurn").textContent=turn;$("#spectatorTurn").textContent=turn;$("#hostTurn").textContent=turn;$("#officialMessage").textContent=live.state?.message||"";$("#spectatorMessage").textContent=live.state?.message||"";$("#officialRank").innerHTML=rankHTML();$("#spectatorRank").innerHTML=rankHTML();const my=live.teams?.[myTeamId];$("#officialIdentity").textContent=my?`Equipo ${my.number} · ${my.name} · ${my.members?.length||0} integrante(s)`:"Este navegador no está registrado como dispositivo oficial.";const canOfficial=!!my&&live.state?.mode==="play"&&!live.state?.paused&&live.state?.currentTeamId===myTeamId&&!live.state?.pending;$("#officialBoard").innerHTML=boardHTML(canOfficial);$("#spectatorBoard").innerHTML=boardHTML(false);if(canOfficial)$$('#officialBoard .card:not(:disabled)').forEach(b=>b.onclick=()=>flipCard(Number(b.dataset.slot),"official"));const pinOk=$("#hostPin").value.trim()===HOST_PIN,canHost=pinOk&&live.state?.mode==="play"&&!live.state?.paused&&!live.state?.pending;$("#hostBoard").innerHTML=boardHTML(canHost);if(canHost)$$('#hostBoard .card:not(:disabled)').forEach(b=>b.onclick=()=>flipCard(Number(b.dataset.slot),"host"));$("#hostTeams").innerHTML=teamsSorted().map(t=>`<div class="hostTeam"><b>Equipo ${t.number} · ${esc(t.name)}</b><div class="small">${(t.members||[]).map(esc).join(" · ")}</div><div style="margin-top:6px;color:var(--gold)">${t.points||0} pts</div></div>`).join("")||'<div class="small">Aún no hay equipos.</div>';renderValidation()}
+async function flipCard(slot,source){if(busy)return;busy=true;loadingSlot=slot;render();try{const stateRef=ref(db,`games/${GAME}/state`),cardsRef=ref(db,`games/${GAME}/cards`),[sSnap,cSnap]=await Promise.all([get(stateRef),get(cardsRef)]),s=sSnap.val(),cards=cSnap.val();if(!s||!cards||s.mode!=="play"||s.paused||s.pending)return;if(source==="official"&&s.currentTeamId!==myTeamId)return;const key=Object.keys(cards).find(k=>Number(cards[k].slot)===slot);if(!key||cards[key].matched||cards[key].revealed)return;await update(ref(db,`games/${GAME}/cards/${key}`),{revealed:true});const opened=[...(s.opened||[]),slot];await update(stateRef,{opened,message:`Tarjeta ${String(slot+1).padStart(2,"0")} revelada.`});if(opened.length===2){const fresh=(await get(cardsRef)).val(),all=Object.values(fresh),c1=all.find(c=>c.slot===opened[0]),c2=all.find(c=>c.slot===opened[1]);if(c1&&c2&&c1.pairId===c2.pairId){const k1=Object.keys(fresh).find(k=>fresh[k].slot===opened[0]),k2=Object.keys(fresh).find(k=>fresh[k].slot===opened[1]);await Promise.all([update(ref(db,`games/${GAME}/cards/${k1}`),{matched:true}),update(ref(db,`games/${GAME}/cards/${k2}`),{matched:true})]);const teamId=s.currentTeamId,team=live.teams[teamId];let pts=MATCH_POINTS;if(team.doubleNext){pts*=2;await update(ref(db,`games/${GAME}/teams/${teamId}`),{doubleNext:false})}await runTransaction(ref(db,`games/${GAME}/teams/${teamId}`),t=>{if(!t)return t;t.points=(t.points||0)+pts;t.pairs=(t.pairs||0)+1;return t});const pair=PAIRS.find(p=>p.id===c1.pairId);await update(stateRef,{opened:[],matchedPairs:(s.matchedPairs||0)+1,pending:{teamId,pairId:pair.id,question:pair.q,options:pair.o},message:`¡Par encontrado! +${pts} puntos. Falta la validación académica.`})}else{await update(stateRef,{message:"No coinciden. Memoriza las posiciones."});setTimeout(async()=>{const latest=(await get(stateRef)).val();if(!latest||latest.pending)return;const current=(await get(cardsRef)).val();for(const sl of opened){const kk=Object.keys(current).find(k=>current[k].slot===sl);if(kk&&!current[kk].matched)await update(ref(db,`games/${GAME}/cards/${kk}`),{revealed:false})}const teamId=latest.currentTeamId,team=live.teams?.[teamId];if(team?.shield){await update(ref(db,`games/${GAME}/teams/${teamId}`),{shield:false});await update(stateRef,{opened:[],message:`Equipo ${team.number} usó TURNO BLINDADO y conserva el turno.`})}else await nextTurn()},1500)}}}finally{loadingSlot=null;setTimeout(()=>{busy=false;render()},120)}}
+async function nextTurn(){const snap=await get(GAME_REF),g=snap.val();if(!g)return;const teams=Object.entries(g.teams||{}).map(([id,t])=>({id,...t})).sort((a,b)=>a.number-b.number);if(!teams.length)return;const idx=teams.findIndex(t=>t.id===g.state.currentTeamId),next=teams[(idx+1+teams.length)%teams.length];await update(ref(db,`games/${GAME}/state`),{currentTeamId:next.id,opened:[],turn:(g.state.turn||0)+1,message:`Turno de Equipo ${next.number} · ${next.name}.`})}
+function renderValidation(){const p=live?.state?.pending,modal=$("#validationModal");if(!p){modal.classList.remove("show");return}modal.classList.add("show");$("#validationQuestion").textContent=p.question;$("#validationOptions").innerHTML="";const canAnswer=myTeamId&&p.teamId===myTeamId;p.options.forEach((opt,i)=>{const b=document.createElement("button");b.className="option";b.textContent=opt;b.disabled=!canAnswer;if(canAnswer)b.onclick=()=>answerValidation(i);$("#validationOptions").appendChild(b)});$("#validationHint").textContent=canAnswer?"Conversen y registren una sola respuesta desde el dispositivo oficial.":"Todos pueden ver la pregunta; solo el dispositivo oficial del equipo en turno puede responder."}
+async function answerValidation(choice){const p=live?.state?.pending;if(!p||p.teamId!==myTeamId)return;const pair=PAIRS.find(x=>x.id===p.pairId),correct=choice===pair.c;if(correct){await runTransaction(ref(db,`games/${GAME}/teams/${myTeamId}`),t=>{if(!t)return t;t.points=(t.points||0)+VALIDATION_POINTS;t.correct=(t.correct||0)+1;return t});const matched=live.state?.matchedPairs||0;if(matched>=12)await update(ref(db,`games/${GAME}/state`),{pending:null,mode:"finished",message:"Partida finalizada."});else await update(ref(db,`games/${GAME}/state`),{pending:null,message:"Respuesta correcta. +5 puntos. El equipo conserva el turno."})}else{await update(ref(db,`games/${GAME}/state`),{pending:null,message:"Respuesta incorrecta. Cambia el turno."});await nextTurn()}}
+async function startGame(){if($("#hostPin").value.trim()!==HOST_PIN)return msg("#hostMessage","PIN incorrecto.",true);const ts=teamsSorted();if(!ts.length)return msg("#hostMessage","Registra al menos un equipo.",true);const cards=makeCards(),cardObj={};cards.forEach((c,i)=>cardObj["C"+String(i+1).padStart(2,"0")]=c);const first=ts[Math.floor(Math.random()*ts.length)];await update(GAME_REF,{cards:cardObj,"state/mode":"play","state/paused":false,"state/currentTeamId":first.id,"state/turn":1,"state/opened":[],"state/pending":null,"state/matchedPairs":0,"state/message":`Inicia Equipo ${first.number} · ${first.name}.`});msg("#hostMessage","Partida iniciada.")}
+async function resetGame(clearTeams){if($("#hostPin").value.trim()!==HOST_PIN)return msg("#hostMessage","PIN incorrecto.",true);if(clearTeams)await remove(ref(db,`games/${GAME}/teams`));else for(const t of teamsSorted())await update(ref(db,`games/${GAME}/teams/${t.id}`),{points:0,pairs:0,correct:0,doubleNext:false,shield:false});await remove(ref(db,`games/${GAME}/cards`));await update(ref(db,`games/${GAME}/state`),{mode:"lobby",paused:false,currentTeamId:"",turn:0,opened:[],pending:null,matchedPairs:0,message:"Registro abierto."});if(clearTeams){myTeamId="";localStorage.removeItem("cq_team_id")}msg("#hostMessage",clearTeams?"Equipos borrados y juego reiniciado.":"Juego reiniciado conservando equipos.")}
+function bindUI(){$("#goRegister").onclick=()=>showView("registerView");$("#goOfficial").onclick=()=>showView("officialView");$("#goSpectator").onclick=()=>showView("spectatorView");$("#goHost").onclick=()=>showView("hostView");$$(".backHome").forEach(b=>b.onclick=()=>showView("homeView"));$("#addMember").onclick=()=>{if(memberCount<5){memberCount++;renderMembers()}};$("#submitTeam").onclick=registerTeam;$("#hostStart").onclick=startGame;$("#hostPause").onclick=async()=>{$("#hostPin").value.trim()===HOST_PIN?await update(ref(db,`games/${GAME}/state`),{paused:true,message:"Partida pausada por el docente."}):msg("#hostMessage","PIN incorrecto.",true)};$("#hostResume").onclick=async()=>{$("#hostPin").value.trim()===HOST_PIN?await update(ref(db,`games/${GAME}/state`),{paused:false,message:"Partida reanudada."}):msg("#hostMessage","PIN incorrecto.",true)};$("#hostResetGame").onclick=()=>confirm("¿Reiniciar la partida conservando los equipos?")&&resetGame(false);$("#hostResetAll").onclick=()=>confirm("¿Borrar todos los equipos y reiniciar?")&&resetGame(true);$("#hostPin").oninput=render}
+onAuthStateChanged(auth,async user=>{if(user){uid=user.uid;$("#connDot").classList.add("on");$("#connText").textContent="Conectado";await ensureGame();onValue(GAME_REF,snap=>{live=snap.val()||{};render()})}});
+signInAnonymously(auth).catch(e=>{$("#connText").textContent="Error";console.error(e)});
+renderMembers();bindUI();
+</script>
+</body>
+</html>
